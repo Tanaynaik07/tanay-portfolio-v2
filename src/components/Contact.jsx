@@ -3,9 +3,9 @@ import React from 'react';
 import '../styles/Contact.css';
 
 const links = [
-  { label: 'Email', value: 'REPLACE_EMAIL', href: 'mailto:REPLACE_EMAIL' },
+  { label: 'Email', value: 'tanaynaik0710@gmail.com', href: 'mailto:tanaynaik0710@gmail.com' },
   { label: 'GitHub', value: '@Tanaynaik07', href: 'https://github.com/Tanaynaik07' },
-  { label: 'LinkedIn', value: 'REPLACE_LINKEDIN_HANDLE', href: 'REPLACE_LINKEDIN_URL' },
+  { label: 'LinkedIn', value: 'Tanay Naik', href: 'https://www.linkedin.com/in/tanay-naik-734286250/' },
   { label: 'Instagram', value: '@tanay_n_7', href: 'https://www.instagram.com/tanay_n_7/' },
 ];
 

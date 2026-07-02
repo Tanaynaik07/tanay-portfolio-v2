@@ -1,8 +1,9 @@
 // src/pages/AdminLogin.jsx
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/Admin.css';
+
 
 const AdminLogin = () => {
   const { login, isAdmin, user } = useAuth();
@@ -19,10 +20,11 @@ const AdminLogin = () => {
     }
   };
 
+ useEffect(() => {
   if (isAdmin) {
     navigate('/admin');
-    return null;
   }
+}, [isAdmin, navigate]);
 
   return (
     <div className="admin-login">

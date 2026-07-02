@@ -19,7 +19,7 @@ const MainSite = () => (
     <Hero />
     <Skills />
     <Projects />
-    <Experience />
+    {/* <Experience /> */}
     <Contact />
     <Footer />
   </div>
