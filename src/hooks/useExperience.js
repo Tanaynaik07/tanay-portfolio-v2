@@ -1,18 +1,18 @@
-// src/hooks/useProjects.js
+// src/hooks/useExperience.js
 import { useEffect, useState } from 'react';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../firebase';
 
-export const useProjects = () => {
-  const [projects, setProjects] = useState([]);
+export const useExperience = () => {
+  const [experience, setExperience] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const q = query(collection(db, 'projects'), orderBy('order', 'desc'));
+    const q = query(collection(db, 'experience'), orderBy('order', 'asc'));
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
-        setProjects(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })));
+        setExperience(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })));
         setLoading(false);
       },
       () => setLoading(false)
@@ -20,5 +20,5 @@ export const useProjects = () => {
     return unsubscribe;
   }, []);
 
-  return { projects, loading };
+  return { experience, loading };
 };
