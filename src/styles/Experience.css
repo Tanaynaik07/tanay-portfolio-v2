@@ -1,0 +1,30 @@
+/* src/styles/Experience.css */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.85rem;
+  min-width: 3.5rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
