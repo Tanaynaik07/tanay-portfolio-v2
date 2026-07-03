@@ -79,6 +79,58 @@ button {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 6rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.12;
+  will-change: transform;
+}
+
+.ambient-blob-1 {
+  width: 42vw;
+  height: 42vw;
+  top: -10%;
+  left: -5%;
+  background: var(--accent);
+  animation: drift-1 26s ease-in-out infinite alternate;
+}
+
+.ambient-blob-2 {
+  width: 36vw;
+  height: 36vw;
+  bottom: -12%;
+  right: -8%;
+  background: var(--accent-2);
+  animation: drift-2 32s ease-in-out infinite alternate;
+}
+
+@keyframes drift-1 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(8vw, 10vh) scale(1.15); }
+}
+
+@keyframes drift-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-6vw, -8vh) scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-blob {
+    animation: none;
+  }
 }
 
 .eyebrow {

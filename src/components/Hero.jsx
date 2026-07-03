@@ -102,12 +102,13 @@ const Hero = () => {
       <div className="hero-scanlines" aria-hidden="true" />
       <div className="hero-sphere" ref={canvasWrapRef} aria-hidden="true" />
       <div className="hero-content">
-        <span className="eyebrow">Indie game dev / builder</span>
-        <h1>Tanay Naik</h1>
+        <span className="eyebrow">Tanay Naik — Developer</span>
+        <h1>Learning by building.</h1>
         <p className="hero-sub">
-          I ship small web games fast — arcade mechanics, tight feedback loops,
-          built and out the door in a day or two. Currently running validation
-          experiments and building the tools behind them.
+          I'm a developer who figures things out by shipping — web games,
+          tools, and full-stack products. Got an idea that needs building?
+          I'd love to help. And if you're a fellow developer looking for
+          someone to build something with, I'm in.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn-primary">See the work</a>

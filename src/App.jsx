@@ -28,6 +28,10 @@ const MainSite = () => (
 const App = () => {
   return (
     <AuthProvider>
+      <div className="ambient-bg" aria-hidden="true">
+        <span className="ambient-blob ambient-blob-1" />
+        <span className="ambient-blob ambient-blob-2" />
+      </div>
       <Routes>
         <Route path="/" element={<MainSite />} />
         <Route path="/admin/login" element={<AdminLogin />} />
